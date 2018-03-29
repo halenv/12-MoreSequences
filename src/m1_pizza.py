@@ -27,10 +27,10 @@ def main():
     #     4. When satisfied with your work, move onto the next test.
     # ------------------------------------------------------------------
 
-    # run_test_generate_points_on_circle()
-    # run_test_draw_points_on_circle()
-    # run_test_pizza()
-    # run_test_polygon()
+    run_test_generate_points_on_circle()
+    run_test_draw_points_on_circle()
+    run_test_pizza()
+    run_test_polygon()
     run_test_fancy_polygon()
 
 
@@ -454,10 +454,11 @@ def polygon(window, circle, number_of_segments, color, thickness):
     # final_line.attach_to(window)
     # window.render(0.01)
 
+
 def run_test_fancy_polygon():
     """ Tests the   fancy_polygon   function. """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement this TEST function.
+    # DONE: 9. Implement this TEST function.
     #   It TESTS the   fancy_polygon   function defined below.
     #   Include at least ** 1 ** ADDITIONAL test (that YOU write).
     #
@@ -508,7 +509,7 @@ def run_test_fancy_polygon():
     window = rg.RoseWindow(800, 600, title)
     circle = rg.Circle(rg.Point(400, 300), 200)
     circle.fill_color = 'light blue'
-    fancy_polygon(window, circle, 152, 50, 'orange', 1)
+    fancy_polygon(window, circle, 152, 51, 'orange', 1)
     window.close_on_mouse_click()
 
 
@@ -570,7 +571,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
       :type thickness:       int
     """
     # ------------------------------------------------------------------
-    # TODO: 10. Implement and test this function.
+    # DONE: 10. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -595,4 +596,5 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
 main()
