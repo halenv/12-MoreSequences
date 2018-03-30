@@ -160,6 +160,18 @@ def run_test_make_less_simple_string():
     print('Testing the   make_less_simple_string   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = '1-2-3-4-5'
+    actual = make_less_simple_string(1, 5)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 2
+    expected = '42'
+    actual = make_less_simple_string(42, 42)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
 
 def make_less_simple_string(m, n):
     """
@@ -187,6 +199,14 @@ def make_less_simple_string(m, n):
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -----------------------------------------------------------------
+
+    sequence = ''
+    for k in range(n - m + 1):
+        if k < n - m:
+            sequence = sequence + str(m + k) + '-'
+        else:
+            sequence = sequence + str(m + k)
+    return sequence
 
 
 def run_test_draw_shapes():
